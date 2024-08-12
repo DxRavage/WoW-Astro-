@@ -1,0 +1,97 @@
+---
+import BlizzardLogo from "../components/BlizzardLogo.astro";
+import WarcraftLogo from "../components/WarcraftLogo.astro";
+import Search from "../components/Search.astro";
+import User from "../components/User.astro";
+import Dots from "../components/Dots.astro";
+import HbMenu from "../components/HbMenu.astro";
+---
+
+<nav>
+  <ul
+    class="flex flex-row gap-4 w-full items-center bg-navbarprimary rounded-xl cursor-pointer md:pr-3"
+  >
+    <BlizzardLogo />
+    <li class="cursor-pointer p-4">
+      <HbMenu />
+    </li>
+    <li class=""><WarcraftLogo /></li>
+
+    <!-- Dropdown container -->
+    <li class="relative group">
+      <span
+        class="cursor-pointer hover:bg-navbarprimary p-4 rounded-md hidden lg:block"
+        >Informacion del juego</span
+      >
+
+      <!-- Dropdown menu -->
+      <ul
+        class="absolute hidden group-hover:block bg-navbarprimary text-white rounded-lg mt-2 w-48"
+      >
+        <li class="p-2 hover:bg-navbarsecondaryhover rounded-t-lg">
+          <a href="#">Descripcion General</a>
+        </li>
+        <li class="p-2 hover:bg-navbarsecondaryhover">
+          <a href="#">Razas</a>
+        </li>
+        <li class="p-2 hover:bg-navbarsecondaryhover rounded-b-lg">
+          <a href="#">Clases</a>
+        </li>
+        <li class="p-2 hover:bg-navbarsecondaryhover rounded-b-lg">
+          <a href="#">Jugadores que regresan</a>
+        </li>
+        <li class="p-2 hover:bg-navbarsecondaryhover rounded-b-lg">
+          <a href="#">Estado de los reinos</a>
+        </li>
+        <li class="p-2 hover:bg-navbarsecondaryhover rounded-b-lg">
+          <a href="#">Notas de la actualizacion de contenido</a>
+        </li>
+        <h2 class="p-2 bg-navbarsecondaryhover">Universo</h2>
+        <li class="p-2 bg-navbarsecondaryhover">
+          <a href="#">Historia y contenido multimedia</a>
+        </li>
+        <li class="p-2 bg-navbarsecondaryhover rounded-b-lg">
+          <a href="#">Línea temporal de Warcraft</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="bg-navbarprimary p-4 rounded-lg hidden md:block xl:hidden">
+      <Dots />
+    </li>
+    <li
+      class="hover:bg-navbarprimary py-2 px-4 rounded-md hidden lg:flex items-center"
+    >
+      <div
+        class="bg-yellow text-xs font-bold px-1 rounded-sm text-navbarsecondarybutton"
+      >
+        NUEVO
+      </div>
+      <span class="ml-2">Expansiones</span>
+    </li>
+
+    <li class="hover:bg-navbarprimary py-2 px-4 rounded-md hidden lg:block">
+      Noticias
+    </li>
+    <li class="hover:bg-navbarprimary py-2 px-4 rounded-md hidden lg:block">
+      Comunidad
+    </li>
+    <li class="hover:bg-navbarprimary py-2 px-4 rounded-md hidden lg:block">
+      Tienda
+    </li>
+    <li class="cursor-pointer md:ml-auto pr-4 hidden md:block">
+      <Search />
+    </li>
+    <li class="cursor-pointer ">
+      <User /> <p class="hidden md:block">Cuenta</p>
+    </li>
+    <button
+      class="hidden md:block text-sm md:text-xl bg-navbarsecondarybutton p-4 rounded-xl hover:bg-navbarsecondaryhover"
+      >Probar gratis</button
+    >
+    <button
+      class="hidden md:block text-sm md:text-xl bg-navbarprimarybutton p-4 rounded-xl hover:bg-navbarprimaryhover justify-end"
+      >Suscribirse ahora</button
+    >
+  </ul>
+</nav>
