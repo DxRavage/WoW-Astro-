@@ -12,7 +12,9 @@ export default {
 			navbarmenu: '#2b1d1c',
 			navbarbadge: '#f8b700', 
 			yellow: '#f7b10a',
-			bgbuttonred: '#b06601'
+			orange: '#f8b700',
+			bgbuttonred: '#b06601',
+			bgfooter: '#211510',
 		  }
 	},
 	plugins: [],

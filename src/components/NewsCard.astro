@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  imgSrc: string;
+  href: string;
+  imageAlt: string;
+}
+
+const { title, date, imgSrc, href, imageAlt } = Astro.props;
+---
+
+<section
+  class="relative bg-cover bg-center bg-no-repeat h-60"
+  style={`background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 2)), url(${imgSrc});`}
+>
+  <a href={href} class="block h-full p-2 text-white">
+    <div class="flex flex-col justify-end h-full">
+      <h3 class="text-sm">{date}</h3>
+      <h2 class="text-yellow text-md font-bold">{title}</h2>
+    </div>
+  </a>
+</section>
