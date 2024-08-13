@@ -9,13 +9,13 @@ import HbMenu from "../components/HbMenu.astro";
 
 <nav>
   <ul
-    class="flex flex-row gap-4 w-full items-center bg-navbarprimary rounded-xl cursor-pointer md:pr-3"
+    class="flex flex-row justify-between md:gap-4 md:w-full items-center bg-navbarprimary rounded-xl cursor-pointer px-4 md:pr-3"
   >
     <BlizzardLogo />
     <li class="cursor-pointer p-4">
       <HbMenu />
     </li>
-    <li class=""><WarcraftLogo /></li>
+    <li><WarcraftLogo /></li>
 
     <!-- Dropdown container -->
     <li class="relative group">
@@ -84,14 +84,14 @@ import HbMenu from "../components/HbMenu.astro";
     </li>
     <li class="cursor-pointer flex items-center">
       <User />
-      <p class="hidden md:block ml-2">Cuenta</p>
+      <p class="hidden md:block md:ml-2">Cuenta</p>
     </li>
     <button
-      class="hidden md:block text-sm md:text-xl bg-navbarsecondarybutton p-4 rounded-xl hover:bg-navbarsecondaryhover"
+      class="hidden md:block text-xs lg:text-xl bg-navbarsecondarybutton p-4 rounded-xl hover:bg-navbarsecondaryhover"
       >Probar gratis</button
     >
     <button
-      class="hidden md:block text-sm md:text-xl bg-navbarprimarybutton p-4 rounded-xl hover:bg-navbarprimaryhover justify-end"
+      class="hidden md:block text-xs lg:text-xl bg-navbarprimarybutton p-4 rounded-xl hover:bg-navbarprimaryhover justify-end"
       >Suscribirse ahora</button
     >
   </ul>
